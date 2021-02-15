@@ -1,5 +1,5 @@
 ## Project Introduction
-
+Syntax highlighted code block
 
 
 ### Markdown
