@@ -43,9 +43,8 @@
 
 > Figure out the relationship between different features and user type.
 > 
-<br/>
-<br/>
 
+  
 
 ### Features
 
@@ -61,6 +60,8 @@
 | \*ofcores                 | Numerical         |  | vpro_enabled              | Categorical       |
 | age_category              | Categorical       |  | discretegraphics          | Categorical       |
 | graphicsmanuf             | Categorical       |  
+
+
 <br/>
 <br/>
 
