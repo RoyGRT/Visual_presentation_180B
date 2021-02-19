@@ -14,8 +14,8 @@
 > machine learning model that can predict a users’ persona based on 
 > the information of their computers.
 >
-
-
+<br/>
+<br/>
 
 ### Background Info
 
@@ -36,20 +36,28 @@
 > these groups. The hypothesis testing further proved our 
 > guess so we decided to move on to some machine learning models.
 >
-
+<br/>
+<br/>
 ### Research Question
 > Figure out the relationship between different features and user type.
-
-
+<br/>
+<br/>
 ### Features
 
 | Feature                   | Type              |  | Feature                   | Type              |
 |:--------------------------|:------------------|:-|:--------------------------|:------------------|
-| chassistype               | Categorical       |  | chassistype               | Categorical       |
-| chassistype_2in1_category | Categorical       |  | chassistype_2in1_category | Categorical       |
-| countryname_normalized    | Categorical       |  | countryname_normalized    | Categorical       |
-| modelvendor_normalized    | Categorical       |  | modelvendor_normalized    | Categorical       |
-| ram                       | Categorical       |  | modelvendor_normalized    | Categorical       |
+| chassistype               | Categorical       |  | graphicscardclass         | Categorical       | 
+| chassistype_2in1_category | Categorical       |  | processornumber           | Numerical         |
+| countryname_normalized    | Categorical       |  | cpuvendor                 | Categorical       |
+| modelvendor_normalized    | Categorical       |  | cpu_family                | Categorical       |
+| model_normalized          | Categorical       |  | cpu_suffix                | Categorical       |
+| ram                       | Numerical         |  | screensize_category       | Categorical       |
+| os                        | Categorical       |  | processor_line            | Categorical       |
+| \*ofcores                 | Numerical         |  | vpro_enabled              | Categorical       |
+| age_category              | Categorical       |  | discretegraphics          | Categorical       |
+| graphicsmanuf             | Categorical       |  
+<br/>
+<br/>
 
 ### ML Models
 
