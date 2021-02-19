@@ -43,13 +43,13 @@
 
 ### Features
 
-| Feature                   | Type              | | Feature                   | Type              |
-|:--------------------------|:------------------| |:--------------------------|:------------------|
-| chassistype               | Categorical       | | chassistype               | Categorical       |
-| chassistype_2in1_category | Categorical       | | chassistype_2in1_category | Categorical       |
-| countryname_normalized    | Categorical       | | countryname_normalized    | Categorical       |
-| modelvendor_normalized    | Categorical       | | modelvendor_normalized    | Categorical       |
-| ram                       | Categorical       | | modelvendor_normalized    | Categorical       |
+| Feature                   | Type              |  | Feature                   | Type              |
+|:--------------------------|:------------------|:-|:--------------------------|:------------------|
+| chassistype               | Categorical       |  | chassistype               | Categorical       |
+| chassistype_2in1_category | Categorical       |  | chassistype_2in1_category | Categorical       |
+| countryname_normalized    | Categorical       |  | countryname_normalized    | Categorical       |
+| modelvendor_normalized    | Categorical       |  | modelvendor_normalized    | Categorical       |
+| ram                       | Categorical       |  | modelvendor_normalized    | Categorical       |
 
 ### ML Models
 
