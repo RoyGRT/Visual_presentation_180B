@@ -1,15 +1,25 @@
 # Intel User Persona & PC System Analysis
 
-## Project Introduction
+### Project Introduction
+
+> In the PC industry, there are different computer setups for 
+> omnifarious PC users. Different types of customers have different 
+> needs and budget for their computers. For instance, we think that 
+> gamers prefer desktops or laptops with high-end GPU and CPU while 
+> office users prefer the ones with decent CPU and long battery life.
+> Hence, being aware of the different needs from different customers 
+> could help computer retailers dramatically with marketing and 
+> resource allocation. With this background, we decided to build a 
+> machine learning model that can predict a users’ persona based on 
+> the information of their computers.
 
 
 
 
+### Background Info
 
-## Background Info
 
 
-```
 > There are 11 different types of personas (user type) in our 
 > dataset and we ignore the group of “Unknown”. We tried to 
 > explore the different computer setup for these groups. 
@@ -25,19 +35,19 @@
 > these groups. The hypothesis testing further proved our 
 > guess so we decided to move on to some machine learning models.
 
-
-
-
-```
+### Research Question
+> Figure out the relationship between different features and user type.
 
 
 ### Features
 
-```
-
-
-
-```
+| Feature                   | Type              |
+|:--------------------------|:------------------|
+| chassistype               | Categorical       |
+| chassistype_2in1_category | Categorical       |
+| countryname_normalized    | Categorical       |
+| modelvendor_normalized    | Categorical       |
+| ram                       | Categorical       |
 
 ### ML Models
 
