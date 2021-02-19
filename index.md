@@ -2,6 +2,7 @@
 
 ### Project Introduction
 
+>
 > In the PC industry, there are different computer setups for 
 > omnifarious PC users. Different types of customers have different 
 > needs and budget for their computers. For instance, we think that 
@@ -12,14 +13,14 @@
 > resource allocation. With this background, we decided to build a 
 > machine learning model that can predict a users’ persona based on 
 > the information of their computers.
-
+>
 
 
 
 ### Background Info
 
 
-
+>
 > There are 11 different types of personas (user type) in our 
 > dataset and we ignore the group of “Unknown”. We tried to 
 > explore the different computer setup for these groups. 
@@ -34,6 +35,7 @@
 > which means there are some significant differences among 
 > these groups. The hypothesis testing further proved our 
 > guess so we decided to move on to some machine learning models.
+>
 
 ### Research Question
 > Figure out the relationship between different features and user type.
