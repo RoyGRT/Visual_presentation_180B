@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Intel User Persona &amp; PC System Analysis | Visual presentation for 180B group 3</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Intel User Persona &amp; PC System Analysis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Visual presentation for 180B group 3" />
+<meta property="og:description" content="Visual presentation for 180B group 3" />
+<link rel="canonical" href="https://roygrt.github.io/Visual_presentation_180B/" />
+<meta property="og:url" content="https://roygrt.github.io/Visual_presentation_180B/" />
+<meta property="og:site_name" content="Intel User Persona &amp; PC System Analysis" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Intel User Persona &amp; PC System Analysis" />
+<script type="application/ld+json">
+{"@type":"WebSite","headline":"Intel User Persona &amp; PC System Analysis","url":"https://roygrt.github.io/Visual_presentation_180B/","description":"Visual presentation for 180B group 3","name":"Intel User Persona &amp; PC System Analysis","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="/Visual_presentation_180B/assets/css/style.css?v=e1062ee2faf55de5539dea4faf518878093bf198">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Intel User Persona & PC System Analysis</h1>
+      <h2 class="project-tagline">Visual presentation for 180B group 3</h2>
+      
+        <a href="https://github.com/RoyGRT/Visual_presentation_180B" class="btn">View on GitHub</a>
+      
+      
+    </section>
+
+    <section class="main-content">
+      <h1 id="intel-user-persona--pc-system-analysis">Intel User Persona &amp; PC System Analysis</h1>
+
+<h3 id="project-introduction">Project Introduction</h3>
+
+<blockquote>
+
+  <p>In the PC industry, there are different computer setups for 
+omnifarious PC users. Different types of customers have different 
+needs and budget for their computers. For instance, we think that 
+gamers prefer desktops or laptops with high-end GPU and CPU while 
+office users prefer the ones with decent CPU and long battery life.
+Hence, being aware of the different needs from different customers 
+could help computer retailers dramatically with marketing and 
+resource allocation. With this background, we decided to build a 
+machine learning model that can predict a users’ persona based on 
+the information of their computers.</p>
+
+  <p><br />
+<br /></p>
+</blockquote>
+
+<h3 id="background-info">Background Info</h3>
+
+<blockquote>
+
+  <p>There are 11 different types of personas (user type) in our 
+dataset and we ignore the group of “Unknown”. We tried to 
+explore the different computer setup for these groups.</p>
+
+  <p>To take a step further in our investigation, we first 
+did some hypothesis testing for these groups based on 
+some numerical features like the ram of PCs. We chose 
+the paired <strong>T-test</strong> for the testing because we want to 
+check the difference between each pair of groups. In 
+the results (shown in the hypothesis testing notebook), 
+most of our p-values were below the threshold of 0.05, 
+which means there are some significant differences among 
+these groups. The hypothesis testing further proved our 
+guess so we decided to move on to some machine learning models.</p>
+
+  <p><br />
+<br /></p>
+</blockquote>
+
+<h3 id="research-question">Research Question</h3>
+
+<blockquote>
+  <p>Figure out the relationship between different features and user type.</p>
+
+</blockquote>
+
+<h3 id="features">Features</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Feature</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">Feature</th>
+      <th style="text-align: left">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">chassistype</td>
+      <td style="text-align: left">Categorical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">graphicscardclass</td>
+      <td style="text-align: left">Categorical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">chassistype_2in1_category</td>
+      <td style="text-align: left">Categorical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">processornumber</td>
+      <td style="text-align: left">Numerical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">countryname_normalized</td>
+      <td style="text-align: left">Categorical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">cpuvendor</td>
+      <td style="text-align: left">Categorical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">modelvendor_normalized</td>
+      <td style="text-align: left">Categorical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">cpu_family</td>
+      <td style="text-align: left">Categorical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">model_normalized</td>
+      <td style="text-align: left">Categorical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">cpu_suffix</td>
+      <td style="text-align: left">Categorical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ram</td>
+      <td style="text-align: left">Numerical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">screensize_category</td>
+      <td style="text-align: left">Categorical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">os</td>
+      <td style="text-align: left">Categorical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">processor_line</td>
+      <td style="text-align: left">Categorical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">*ofcores</td>
+      <td style="text-align: left">Numerical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">vpro_enabled</td>
+      <td style="text-align: left">Categorical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">age_category</td>
+      <td style="text-align: left">Categorical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">discretegraphics</td>
+      <td style="text-align: left">Categorical</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">graphicsmanuf</td>
+      <td style="text-align: left">Categorical</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br />
+<br /></p>
+
+<h3 id="ml-models">ML Models</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+</code></pre></div></div>
+<h3 id="performance-analysis">Performance analysis</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+</code></pre></div></div>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/RoyGRT/Visual_presentation_180B">Visual_presentation_180B</a> is maintained by <a href="https://github.com/RoyGRT">RoyGRT</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </section>
+
+    
+  </body>
+</html>
