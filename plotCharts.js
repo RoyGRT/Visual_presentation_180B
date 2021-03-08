@@ -4,6 +4,10 @@ function plotKNN() {
             text: 'KNN performance'
         },
 
+        caption: {
+            text: 'KNN is a model that classifies data points based on the points that are most similar to it. It uses test data to make an “educated guess” on what an unclassified point should be classified as. In our case, we are trying to predict a user’s type by identifying which cluster the user is in.'
+        },
+
         yAxis: {
             title: {
                 text: 'performance'
@@ -64,6 +68,10 @@ function plotDT() {
     Highcharts.chart('chart', {
         title: {
             text: 'Decision Tree performance'
+        },
+
+        caption: {
+            text: 'Decision trees are constructed via an algorithmic approach that identifies ways to split a data set based on different conditions. It is one of the most widely used and practical methods for supervised learning.'
         },
 
         yAxis: {
@@ -130,6 +138,10 @@ function plotRF() {
             text: 'Random Forest performance'
         },
 
+        caption: {
+            text: 'Based on decision trees, random forest builds multiple decision trees and merges them together to get a more accurate and stable prediction.'
+        },
+
         yAxis: {
             title: {
                 text: 'performance'
@@ -194,6 +206,10 @@ function plotNN() {
             text: 'Neural Network --Multilayer Perceptron'
         },
 
+        caption: {
+            text: 'A perceptron is a simple binary classification algorithm. It helps to divide a set of input signals into two parts—“yes” and “no”. A multilayer perceptron (MLP) is a perceptron that teams up with additional perceptrons, stacked in several layers, to solve complex problems.'
+        },
+
         yAxis: {
             title: {
                 text: 'performance'
@@ -255,6 +271,10 @@ function plotSGD() {
     Highcharts.chart('chart', {
         title: {
             text: 'Random Forest performance'
+        },
+
+        caption: {
+            text: 'Gradient, in plain terms, means slope or slant of a surface. So gradient descent literally means descending a slope to reach the lowest point on that surface.The main goal of SGD is to reach the minimum of loss function.'
         },
 
         yAxis: {
@@ -321,6 +341,10 @@ function plotLog() {
             text: 'Logistic Regression'
         },
 
+        caption: {
+            text: 'Logistic Regression is a Machine Learning algorithm which is used for classification problems, it is a predictive analysis algorithm and based on the concept of probability.'
+        },
+        
         yAxis: {
             title: {
                 text: 'performance'
