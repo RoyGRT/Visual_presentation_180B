@@ -17,6 +17,7 @@
 	<meta property="twitter:title" content="Intel User Persona &amp; PC System Analysis" />
 	<script type="application/ld+json">
 	{"@type":"WebSite","headline":"Intel User Persona &amp; PC System Analysis","url":"https://roygrt.github.io/Visual_presentation_180B/","description":"Visual presentation for 180B group 3","name":"Intel User Persona &amp; PC System Analysis","@context":"https://schema.org"}</script>
+	<script type=”text/javascript” src=”http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML”></script>
 
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/highcharts-more.js"></script>
@@ -61,10 +62,11 @@
 
 			
 			</blockquote>
+			<br>
 
 			<h3 id="background-info">Background Info</h3>
-			<p></p>
-			<br>
+			
+			
 
 			<blockquote>
 
@@ -83,8 +85,69 @@
 					these groups. The hypothesis testing further proved our 
 				guess so we decided to move on to some machine learning models.</p>
 
-				<p><br />
-					<br /></p>
+				
+				</blockquote>
+
+				<br>
+
+				<h3>Methods</h3>
+			
+			
+
+				<blockquote>
+					<h4>1. Data collection </h4>
+
+					<p>
+						To get the data from the PC system, we use the XLDSK and ATLSDK provided by Intel and build an input library. We are given the basic template of data collection by Intel. We added some useful metrics and used some APIs to get the data we want. We mainly collected the data related to the user’s battery, like capacity, percentage remaining, etc.. Intel also provided us the users’ system data so that we can have more information about the users.
+					</p>
+					<strong>ATLSDK:</strong>
+					<p>
+						TAnalyzer Task Libraries (ATLs) are used by the Intel® System Usage Report (SUR) field data collector to expand and customize basic features and collection capabilities. These libraries are the preferred mechanism to supplement the Intel® SUR field data collector with new data collection capabilities, new business logics, or support for new logging formats.
+					</p>
+
+					<strong>Input libraries:</strong>
+					<p>
+						Input Libraries – or ILs – are the data collection units of the Intel SUR collector. The nature of an IL is to allow for strong code reuse, thus reducing TTM. Use of existing ILs allows customers to leverage the expertise of other teams. Over time, customers can gradually build up a custom collection of ILs.
+					</p>
+					<p>
+						ILs expose at least one input (or metric). However, ILs can reconfigure themselves at any time to change the number and the nature of their inputs without requiring a stop and restart of the collector. If needed, this allows for the development of complex modules with the ability to adapt to various platform changes.
+					</p>
+					<br>
+					<h4>2.Data Cleaning and EDA:</h4>
+					<p>
+						After we got the data, there were some NaN and weird values. We cleaned the data and did some data transformation, like one-hot encodings on categorical features, so that we can do further tests and analysis. 
+					</p>
+					<p>
+						When cleaning is done, we explore some important features we will use and see their distributions. We investigate some of the main features of the user’s. See in appendix 2.1 to 2.5.
+					</p>
+					<h4>3.Paired-T Tests On Numerical Features (RAM):</h4>
+					<p>
+						The goal of our hypothesis testing here is to check if there is a significant difference between the RAM of different types of users. The reason we use paired t-test is that two sample t-test is designed for testing differences between independent groups. We consider each persona as an independent group.
+					</p>
+
+					<h4>4.Chi-Square Tests for Independence on Categorical Features:</h4>
+
+					<p>
+						Our goal here is to find if the categorical features are related or independent from the personas (user types). A chi-square test for independence compares two variables in a contingency table to see if they are related. In a more general sense, it tests to see whether distributions of categorical variables differ from each other.
+					</p>
+
+					<h4>5.Machine learning models</h4>
+
+					<p>
+						There are three main points in our experiment setting:
+						<ul>
+							<li>Start 5 trials for the whole experiment. In each trail, generate random train and test data.</li>
+							<li>For each classifier, try different parameters.</li>
+							<li>Use both accuracy and F1 score as metric</li>
+						</ul>
+						We mainly use 6 different machine learning models to predict the persona: K Nearest Neighbours, 
+						Decision Tree, Random Forest, Neural Network, Stochastic Gradient Descent and Logistic Regression. 
+						For each of the models, the first split the data into training and testing sets, and then fit the training data into our model. Also, optimizing parameters and trails We compare the models’ performance using accuracy score and F1 score (F1 = 2 ✕ (precision * recall / precision + recall )).
+
+					</p>
+
+
+				
 				</blockquote>
 
 				<h3 id="research-question">Research Question</h3>
@@ -94,6 +157,7 @@
 
 				</blockquote>
 
+				<br>
 				<h3 id="features">Features</h3>
 				
 
